@@ -1,10 +1,14 @@
 <?php
 
-$a= "箇砞" ;
-if (!isset ($_GET['xxx']) ){
-	echo"叫块把计xxx";
-}else{
-	$a = $_GET['xxx'];
-}
-echo $a;
-
+if( !isset($_GET['aa'])
+	|| !isset ($_GET['bb'])
+	|| !is_numeric($_GET['aa'])
+	|| !is_numeric($_GET['bb'])) {
+	echo "把计ぃタ絋";
+	exit;
+	}
+	
+$x = $_GET('aa');
+$y = $_GET('bb');
+$z = $x+$y;
+echo $z;
